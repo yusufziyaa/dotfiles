@@ -1,0 +1,35 @@
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rightScrollBar: rgb
+Xft.autohint: true
+Xft.hintstyle: full
+Xft.lcdfilter: lcddefault
+
+! Dracula Xresources palette
+*.foreground: #F8F8F2
+*.background: #22242e
+! Black + DarkGray
+*.color0:     #000000
+*.color8:     #4D4D4D
+!DarkRed + Red
+*.color1:     #FF5555
+*.color9:     #FF6E67
+!DarkGreen + Green
+*.color2:     #50FA7B
+*.color10:    #5AF78E
+!DarkYellow + Yellow
+*.color3:     #F1FA8C
+*.color11:    #F4F99D
+!DarkBlue + Blue
+*.color4:     #BD93F9
+*.color12:    #CAA9FA
+!DarkMagenta + Magenta
+*.color5:     #FF79C6
+*.color13:    #FF92D0
+!Darkcyan + Cyan
+*.color6:     #8BE9FD
+*.color14:    #9AEDFE
+!LightGrey+ White
+*.color7:     #BFBFBF
+*.color15:    #E6E6E6
