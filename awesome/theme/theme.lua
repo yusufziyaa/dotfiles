@@ -17,7 +17,7 @@ local nconf = naughty.config
 
 local theme = {}
 
-theme.font          = "JetBrainsMono 9"
+theme.font          = "SF Mono 9"
 
 theme.bg_focus      = colors.background
 theme.bg_normal     = colors.background
