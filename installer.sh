@@ -1,5 +1,5 @@
 echo "Installing needed programs"
-sudo pacman -S awesome picom plank fish flameshot alacritty rofi
+sudo pacman -S awesome picom plank fish flameshot alacritty rofi cowsay fortune_mod
 
 echo "Installing OMF"
 curl -L https://get.oh-my.fish | fish
@@ -24,5 +24,6 @@ echo "Copying config files"
 cp -r ./awesome ~/.config
 cp -r ./fish ~/.config
 cp -r ./alacritty ~/.config
-
+cp -r ./rofi ~/.config
 cp ./picom.conf ~/picom.conf
+cp ./starship.toml ~/.config/
