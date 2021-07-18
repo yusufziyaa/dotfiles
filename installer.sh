@@ -17,8 +17,10 @@ then
 	cp ./dracula/.Xresources ~/
 fi
 
-echo "Installing SF Mono"
+echo "Installing Fonts"
 sudo cp ./fonts/sfmono/* /usr/share/fonts/
+sudo cp ./fonts/agave/* /usr/share/fonts/
+sudo cp ./local.conf /etc/fonts/
 
 echo "Copying config files"
 cp -r ./awesome ~/.config
