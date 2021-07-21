@@ -93,11 +93,11 @@ local maximize = gcolor.recolor_image(circle,colors.color11)
 local disabled = gcolor.recolor_image(circle,colors.color15)
 
 -- Define the image to load
-theme.titlebar_close_button_normal = config_dir.."theme/titlebar/smaller_disabled.png"
-theme.titlebar_close_button_focus  = config_dir.."theme/titlebar/smaller_red.png"
+theme.titlebar_close_button_normal = config_dir.."theme/titlebar/disabled.png"
+theme.titlebar_close_button_focus  = config_dir.."theme/titlebar/red.png"
 
-theme.titlebar_minimize_button_normal = config_dir.."theme/titlebar/smaller_disabled.png"
-theme.titlebar_minimize_button_focus  = config_dir.."theme/titlebar/smaller_green.png"
+theme.titlebar_minimize_button_normal = config_dir.."theme/titlebar/disabled.png"
+theme.titlebar_minimize_button_focus  = config_dir.."theme/titlebar/green.png"
 
 theme.titlebar_ontop_button_normal_inactive = config_dir.."theme/titlebar/ontop_normal_inactive.png"
 theme.titlebar_ontop_button_focus_inactive  = config_dir.."theme/titlebar/ontop_focus_inactive.png"
@@ -114,10 +114,10 @@ theme.titlebar_floating_button_focus_inactive  = config_dir.."theme/titlebar/flo
 theme.titlebar_floating_button_normal_active = config_dir.."theme/titlebar/floating_normal_active.png"
 theme.titlebar_floating_button_focus_active  = config_dir.."theme/titlebar/floating_focus_active.png"
 
-theme.titlebar_maximized_button_normal_inactive = config_dir.."theme/titlebar/smaller_disabled.png"
-theme.titlebar_maximized_button_focus_inactive  = config_dir.."theme/titlebar/smaller_yellow.png"
-theme.titlebar_maximized_button_normal_active = config_dir.."theme/titlebar/smaller_disabled.png"
-theme.titlebar_maximized_button_focus_active  = config_dir.."theme/titlebar/smaller_yellow.png"
+theme.titlebar_maximized_button_normal_inactive = config_dir.."theme/titlebar/disabled.png"
+theme.titlebar_maximized_button_focus_inactive  = config_dir.."theme/titlebar/yellow.png"
+theme.titlebar_maximized_button_normal_active = config_dir.."theme/titlebar/disabled.png"
+theme.titlebar_maximized_button_focus_active  = config_dir.."theme/titlebar/yellow.png"
 
 theme.wallpaper = config_dir.."/theme/background.png"
 

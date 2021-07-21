@@ -1,5 +1,6 @@
 echo "Installing needed programs"
-sudo pacman -S awesome picom plank fish flameshot alacritty rofi cowsay fortune_mod
+sudo pacman -S awesome picom plank fish flameshot alacritty rofi cowsay fortune_mod network-manager network-manager-applet inkscape
+yay -S xgetres
 
 echo "Installing OMF"
 curl -L https://get.oh-my.fish | fish

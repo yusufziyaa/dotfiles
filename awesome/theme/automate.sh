@@ -11,12 +11,13 @@ rm -rf ./titlebar/smaller_circle.png
 
 function colorize {
 	rm -rf ./titlebar/$2.svg
-	rm -rf ./titlebar/smaller_$2.png
 	rm -rf ./titlebar/$2.png
 
 	sed -e "s/#ffffff/$1/" ./titlebar/circle.svg > ./titlebar/$2.svg
 	inkscape -w 64 -h 64 ./titlebar/$2.svg -o ./titlebar/$2.png
 	convert -set colorspace sRGB -composite -gravity center ./titlebar/empty.png ./titlebar/$2.png ./titlebar/smaller_$2.png
+	rm -rf ./titlebar/$2.png
+	mv ./titlebar/smaller_$2.png ./titlebar/$2.png
 
 }
 
