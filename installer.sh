@@ -1,5 +1,5 @@
 echo "Installing needed programs"
-sudo pacman -S awesome picom plank fish flameshot alacritty rofi cowsay fortune_mod network-manager network-manager-applet inkscape
+sudo pacman -Syu awesome picom plank fish flameshot alacritty rofi cowsay fortune-mod networkmanager network-manager-applet inkscape xorg-xbacklight kitty
 yay -S xgetres
 
 echo "Installing OMF"
