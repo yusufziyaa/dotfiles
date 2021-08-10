@@ -29,6 +29,8 @@ if awesome.startup_errors then
                      text = awesome.startup_errors })
 end
 
+os.setlocale(os.getenv("tr_TR.UTF-8"))
+
 -- Handle runtime errors after startup
 do
     local in_error = false
@@ -199,7 +201,10 @@ awful.screen.connect_for_each_screen(function(s)
    s.mytaglist = awful.widget.taglist {
         screen  = s,
         filter  = awful.widget.taglist.filter.all,
-        buttons = taglist_buttons
+        buttons = taglist_buttons,
+	style = {
+		shape = function (cr,w,h) gears.shape.circle(cr,w,h) end,
+	},
     }
 
     -- Create a tasklist widget
@@ -214,29 +219,30 @@ awful.screen.connect_for_each_screen(function(s)
      -- Create the wibox
      s.mywibox = awful.wibar({ 
 	    screen = s,
-	    width =  "98%",
+	    width =  "100%",
 	    height = beautiful.get_font_height(nil) * 1.5,
-	    shape = function(cr,w,h) gears.shape.rounded_rect(cr,w,h,5) end,
-   	    opacity= 0.8,
+	    shape = function(cr,w,h) gears.shape.rectangle(cr,w,h) end,
+   	    opacity= 0.6,
 	    border_width=0,
 	    visible=true,
 	    ontop=false,
 	    type="toolboawful.wibar"
-     })
 
-     s.mywibox.y = 7
+      })
 
       -- Add widgets to the wibox
       s.mywibox:setup {
 	
          	layout = wibox.layout.align.horizontal,
+		expand = "none",
         	{ -- Left widgets
             		layout = wibox.layout.fixed.horizontal,
-        		mylauncher,
-            		s.mytaglist,
             		s.mypromptbox,
         	},
-		nil, -- Middle widget
+		{
+			layout = wibox.layout.fixed.horizontal,
+			s.mytaglist,
+		}, -- Middle widget
         	{ -- Right widgets
 	    		layout = wibox.layout.fixed.horizontal,
             		mykeyboardlayout,
@@ -251,9 +257,7 @@ end)
 
 -- {{{ Mouse bindings
 root.buttons(gears.table.join(
-    awful.button({ }, 3, function () mymainmenu:toggle() end),
-    awful.button({ }, 4, awful.tag.viewprev),
-    awful.button({ }, 5, awful.tag.viewnext)
+    awful.button({ }, 3, function () mymainmenu:toggle() end)
 ))
 -- }}}
 
@@ -548,7 +552,7 @@ awful.rules.rules = {
 client.connect_signal("manage", function (c)
     
     c.shape = function(cr,w,h)
-	    gears.shape.rounded_rect(cr,w,h,11)
+	    gears.shape.rectangle(cr,w,h) -- 11
     end
     
     -- Set the windows at the slave,
@@ -609,7 +613,7 @@ client.connect_signal("request::titlebars", function(c)
 
 -- Enable sloppy focus, so that focus follows mouse.
 client.connect_signal("mouse::enter", function(c)
-    c:emit_signal("request::activate", "mouse_enter", {raise = false})
+	-- rc:emit_signal("request::activate", "mouse_enter", {raise = false})
 end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
