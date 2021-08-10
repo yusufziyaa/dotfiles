@@ -31,7 +31,7 @@ theme.fg_urgent     = colors.color1
 theme.fg_minimize   = colors.foreground
 
 theme.useless_gap   = dpi(10)
-theme.border_width  = dpi(2)
+theme.border_width  = dpi(0)
 theme.border_normal = colors.background
 theme.border_focus  = colors.color5
 theme.border_marked = colors.background
