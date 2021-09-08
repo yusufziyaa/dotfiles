@@ -11,17 +11,14 @@ rm -rf ./titlebar/smaller_circle.png
 
 function colorize {
 	rm -rf ./titlebar/$2.svg
-	rm -rf ./titlebar/$2.png
-
 	sed -e "s/#ffffff/$1/" ./titlebar/circle.svg > ./titlebar/$2.svg
-	inkscape -w 64 -h 64 ./titlebar/$2.svg -o ./titlebar/$2.png
-	convert -set colorspace sRGB -composite -gravity center ./titlebar/empty.png ./titlebar/$2.png ./titlebar/smaller_$2.png
-	rm -rf ./titlebar/$2.png
-	mv ./titlebar/smaller_$2.png ./titlebar/$2.png
-
 }
 
-colorize $(xgetres xresources.color1) red
-colorize $(xgetres xresources.color3) yellow
-colorize $(xgetres xresources.color2) green
-colorize $(xgetres xresources.color8) disabled
+colorize $(xgetres xresources.color1) red false
+colorize $(xgetres xresources.color3) yellow false
+colorize $(xgetres xresources.color2) green false
+colorize $(xgetres xresources.color8) disabled false
+colorize $(xgetres xresources.color9) red_hover true
+colorize $(xgetres xresources.color11) yellow_hover true
+colorize $(xgetres xresources.color10) green_hover true
+colorize $(xgetres xresources.darkgray) disabled_hover true

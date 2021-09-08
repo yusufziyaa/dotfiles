@@ -12,7 +12,7 @@
 #  - /path/to/alacritty.yml
 
 import :
-   - ~/.config/alacritty/dracula.yml
+   - ~/.config/alacritty/better.yml
 
 tabspaces: 4
 
@@ -362,7 +362,7 @@ font:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.9 #default value was 0.85
+background_opacity: 1.0 #default value was 0.85
 
 #selection:
   # This string contains all characters that are used as separators for

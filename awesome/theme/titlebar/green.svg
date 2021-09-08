@@ -27,12 +27,12 @@
      units="px"
      width="100px"
      inkscape:zoom="6.1647026"
-     inkscape:cx="25.386464"
-     inkscape:cy="50.042966"
-     inkscape:window-width="1880"
-     inkscape:window-height="932"
-     inkscape:window-x="20"
-     inkscape:window-y="44"
+     inkscape:cx="56.531519"
+     inkscape:cy="54.828273"
+     inkscape:window-width="1878"
+     inkscape:window-height="985"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
@@ -42,10 +42,10 @@
      inkscape:groupmode="layer"
      id="layer1">
     <circle
-       style="fill:#50FA7B;fill-opacity:1;fill-rule:evenodd;stroke-width:0.330729"
+       style="opacity:1;fill:#1fe378;fill-opacity:1;fill-rule:evenodd;stroke-width:0.165363"
        id="path31"
        cx="13.229167"
        cy="13.229167"
-       r="13.229167" />
+       r="6.6145835" />
   </g>
 </svg>

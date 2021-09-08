@@ -19,6 +19,8 @@ local theme = {}
 
 theme.font          = "SF Mono 9"
 
+local lightblack = "#4B4E51"
+
 theme.bg_focus      = colors.background
 theme.bg_normal     = colors.background
 theme.bg_urgent     = colors.color9
@@ -26,20 +28,26 @@ theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = colors.foreground
-theme.fg_focus      = colors.color13
-theme.fg_urgent     = colors.color1
+theme.fg_focus      = colors.foreground
+theme.fg_urgent     = colors.foreground
 theme.fg_minimize   = colors.foreground
 
+theme.border_width  = 1
 theme.useless_gap   = dpi(10)
-theme.border_width  = dpi(0)
-theme.border_normal = colors.background
-theme.border_focus  = colors.color5
-theme.border_marked = colors.background
+theme.border_normal = colors.color8
+theme.border_focus  = colors.color8
+theme.border_marked = colors.color8
 
 nconf.defaults.icon_size=100
 nconf.defaults.border_width=0
 nconf.defaults.shape = function(cr,w,h) gears.shape.rounded_rect(cr,w,h,5) end
 nconf.defaults.width=300
+
+theme.taglist_fg_focus = colors.color6
+theme.taglist_fg_occupied = colors.foreground
+theme.taglist_fg_empty = colors.color8
+
+theme.titlebar_fg_normal = lightblack
 
 -- theme.taglist_squares_sel = gears.filesystem.get_configuration_dir()  .. "images/bar.png"
 -- theme.taglist_squares_unsel  = gears.filesystem.get_configuration_dir()  .. "images/bar2_.png"
@@ -93,11 +101,15 @@ local maximize = gcolor.recolor_image(circle,colors.color11)
 local disabled = gcolor.recolor_image(circle,colors.color15)
 
 -- Define the image to load
-theme.titlebar_close_button_normal = config_dir.."theme/titlebar/disabled.png"
-theme.titlebar_close_button_focus  = config_dir.."theme/titlebar/red.png"
+theme.titlebar_close_button_normal = config_dir.."theme/titlebar/disabled.svg"
+theme.titlebar_close_button_focus  = config_dir.."theme/titlebar/red.svg"
+theme.titlebar_close_button_normal_hover  = config_dir.."theme/titlebar/disabled_hover.svg"
+theme.titlebar_close_button_focus_hover  = config_dir.."theme/titlebar/red_hover.svg"
 
-theme.titlebar_minimize_button_normal = config_dir.."theme/titlebar/disabled.png"
-theme.titlebar_minimize_button_focus  = config_dir.."theme/titlebar/green.png"
+theme.titlebar_minimize_button_normal = config_dir.."theme/titlebar/disabled.svg"
+theme.titlebar_minimize_button_focus  = config_dir.."theme/titlebar/green.svg"
+theme.titlebar_minimize_button_normal_hover  = config_dir.."theme/titlebar/disabled_hover.svg"
+theme.titlebar_minimize_button_focus_hover  = config_dir.."theme/titlebar/green_hover.svg"
 
 theme.titlebar_ontop_button_normal_inactive = config_dir.."theme/titlebar/ontop_normal_inactive.png"
 theme.titlebar_ontop_button_focus_inactive  = config_dir.."theme/titlebar/ontop_focus_inactive.png"
@@ -114,12 +126,19 @@ theme.titlebar_floating_button_focus_inactive  = config_dir.."theme/titlebar/flo
 theme.titlebar_floating_button_normal_active = config_dir.."theme/titlebar/floating_normal_active.png"
 theme.titlebar_floating_button_focus_active  = config_dir.."theme/titlebar/floating_focus_active.png"
 
-theme.titlebar_maximized_button_normal_inactive = config_dir.."theme/titlebar/disabled.png"
-theme.titlebar_maximized_button_focus_inactive  = config_dir.."theme/titlebar/yellow.png"
-theme.titlebar_maximized_button_normal_active = config_dir.."theme/titlebar/disabled.png"
-theme.titlebar_maximized_button_focus_active  = config_dir.."theme/titlebar/yellow.png"
+theme.titlebar_maximized_button_normal_active = config_dir.."theme/titlebar/disabled.svg"
+theme.titlebar_maximized_button_normal_inactive = config_dir.."theme/titlebar/disabled.svg"
+theme.titlebar_maximized_button_focus_active = config_dir.."theme/titlebar/yellow.svg"
+theme.titlebar_maximized_button_focus_inactive = config_dir.."theme/titlebar/yellow.svg"
 
-theme.wallpaper = config_dir.."/theme/background.png"
+theme.titlebar_maximized_button_normal_active_hover = config_dir.."theme/titlebar/disabled_hover.svg"
+theme.titlebar_maximized_button_normal_inactive_hover = config_dir.."theme/titlebar/disabled_hover.svg"
+theme.titlebar_maximized_button_focus_active_hover = config_dir.."theme/titlebar/yellow_hover.svg"
+theme.titlebar_maximized_button_focus_inactive_hover = config_dir.."theme/titlebar/yellow_hover.svg"
+
+
+-- theme.wallpaper = config_dir.."/theme/background.png"
+theme.wallpaper = config_dir.."/theme/colorful.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = config_dir.."theme/layouts/fairhw.png"
