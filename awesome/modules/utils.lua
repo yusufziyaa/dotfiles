@@ -3,6 +3,9 @@ local beautiful = require("beautiful")
 local gears = require("gears")
 local wibox = require("wibox")
 local menubar = require("menubar")
+local xresources = require("beautiful.xresources")
+local dpi = xresources.apply_dpi
+
 require("modules.generalShortcuts")
 
 local function set_wallpaper(s)
@@ -113,6 +116,9 @@ awful.screen.connect_for_each_screen(function(s)
 	    widget = wibox.widget.textbox
       })
 
+      local systray = wibox.widget.systray()
+      systray:set_base_size(15)
+
       -- Add widgets to the wibox
       s.mywibox:setup {
 	
@@ -130,8 +136,16 @@ awful.screen.connect_for_each_screen(function(s)
         	{ -- Right widgets
 	    		layout = wibox.layout.fixed.horizontal,
             		mykeyboardlayout,
-            		wibox.widget.systray(),
-            		mytextclock,
+			{
+				{
+					systray,
+					widget = wibox.container.place,
+				},
+				widget = wibox.container.margin,
+				left = dpi(2),
+				right = dpi(6)
+			},
+			mytextclock,
 	     		s.mylayoutbox,
         	},
 	}

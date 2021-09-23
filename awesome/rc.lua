@@ -6,8 +6,11 @@ local beautiful = require("beautiful")
 require("awful.hotkeys_popup.keys")
 
 require("modules.errorHandler")
-require("modules.savefloats")
+-- require("modules.savefloats")
 require("modules.better-resize")
+local lgi = require("lgi")
+
+local cairo = lgi.cairo
 
 os.setlocale(os.getenv("tr_TR.UTF-8"))
 

@@ -17,7 +17,8 @@ local nconf = naughty.config
 
 local theme = {}
 
-theme.font          = "SF Mono 9"
+theme.font          = "Inter Medium 9"
+theme.icon_theme = "Adwaita"
 
 local lightblack = "#4B4E51"
 
@@ -32,7 +33,8 @@ theme.fg_focus      = colors.foreground
 theme.fg_urgent     = colors.foreground
 theme.fg_minimize   = colors.foreground
 
-theme.border_width  = 1
+theme.border_width  = 2
+theme.border_radius = 20
 theme.useless_gap   = dpi(10)
 theme.border_normal = colors.color8
 theme.border_focus  = colors.color8
@@ -49,6 +51,8 @@ theme.taglist_fg_empty = colors.color8
 
 theme.titlebar_fg_normal = lightblack
 
+
+theme.systray_icon_spacing = 1
 -- theme.taglist_squares_sel = gears.filesystem.get_configuration_dir()  .. "images/bar.png"
 -- theme.taglist_squares_unsel  = gears.filesystem.get_configuration_dir()  .. "images/bar2_.png"
 
@@ -102,39 +106,33 @@ local disabled = gcolor.recolor_image(circle,colors.color15)
 
 -- Define the image to load
 theme.titlebar_close_button_normal = config_dir.."theme/titlebar/disabled.svg"
+theme.titlebar_close_button_normal_hover = config_dir.."theme/titlebar/close_hover_disabled.svg"
+theme.titlebar_close_button_normal_press = config_dir.."theme/titlebar/close_press_disabled.svg"
+
 theme.titlebar_close_button_focus  = config_dir.."theme/titlebar/red.svg"
-theme.titlebar_close_button_normal_hover  = config_dir.."theme/titlebar/disabled_hover.svg"
-theme.titlebar_close_button_focus_hover  = config_dir.."theme/titlebar/red_hover.svg"
+theme.titlebar_close_button_focus_press = config_dir.."theme/titlebar/close_press.svg"
+theme.titlebar_close_button_focus_hover  = config_dir.."theme/titlebar/close_hover.svg"
+
 
 theme.titlebar_minimize_button_normal = config_dir.."theme/titlebar/disabled.svg"
 theme.titlebar_minimize_button_focus  = config_dir.."theme/titlebar/green.svg"
 theme.titlebar_minimize_button_normal_hover  = config_dir.."theme/titlebar/disabled_hover.svg"
 theme.titlebar_minimize_button_focus_hover  = config_dir.."theme/titlebar/green_hover.svg"
 
-theme.titlebar_ontop_button_normal_inactive = config_dir.."theme/titlebar/ontop_normal_inactive.png"
-theme.titlebar_ontop_button_focus_inactive  = config_dir.."theme/titlebar/ontop_focus_inactive.png"
-theme.titlebar_ontop_button_normal_active = config_dir.."theme/titlebar/ontop_normal_active.png"
-theme.titlebar_ontop_button_focus_active  = config_dir.."theme/titlebar/ontop_focus_active.png"
-
-theme.titlebar_sticky_button_normal_inactive = config_dir.."theme/titlebar/sticky_normal_inactive.png"
-theme.titlebar_sticky_button_focus_inactive  = config_dir.."theme/titlebar/sticky_focus_inactive.png"
-theme.titlebar_sticky_button_normal_active = config_dir.."theme/titlebar/sticky_normal_active.png"
-theme.titlebar_sticky_button_focus_active  = config_dir.."theme/titlebar/sticky_focus_active.png"
-
-theme.titlebar_floating_button_normal_inactive = config_dir.."theme/titlebar/floating_normal_inactive.png"
-theme.titlebar_floating_button_focus_inactive  = config_dir.."theme/titlebar/floating_focus_inactive.png"
-theme.titlebar_floating_button_normal_active = config_dir.."theme/titlebar/floating_normal_active.png"
-theme.titlebar_floating_button_focus_active  = config_dir.."theme/titlebar/floating_focus_active.png"
 
 theme.titlebar_maximized_button_normal_active = config_dir.."theme/titlebar/disabled.svg"
 theme.titlebar_maximized_button_normal_inactive = config_dir.."theme/titlebar/disabled.svg"
+theme.titlebar_maximized_button_normal_active_hover = config_dir.."theme/titlebar/unmaximized_hover_disabled.svg"
+theme.titlebar_maximized_button_normal_inactive_hover = config_dir.."theme/titlebar/maximized_hover_disabled.svg"
+theme.titlebar_maximized_button_normal_active_press = config_dir.."theme/titlebar/unmaximized_press_disabled.svg"
+theme.titlebar_maximized_button_normal_inactive_press = config_dir.."theme/titlebar/maximized_press_disabled.svg"
+
 theme.titlebar_maximized_button_focus_active = config_dir.."theme/titlebar/yellow.svg"
 theme.titlebar_maximized_button_focus_inactive = config_dir.."theme/titlebar/yellow.svg"
-
-theme.titlebar_maximized_button_normal_active_hover = config_dir.."theme/titlebar/disabled_hover.svg"
-theme.titlebar_maximized_button_normal_inactive_hover = config_dir.."theme/titlebar/disabled_hover.svg"
-theme.titlebar_maximized_button_focus_active_hover = config_dir.."theme/titlebar/yellow_hover.svg"
-theme.titlebar_maximized_button_focus_inactive_hover = config_dir.."theme/titlebar/yellow_hover.svg"
+theme.titlebar_maximized_button_focus_active_hover = config_dir.."theme/titlebar/unmaximized_hover.svg"
+theme.titlebar_maximized_button_focus_inactive_hover = config_dir.."theme/titlebar/maximized_hover.svg"
+theme.titlebar_maximized_button_focus_inactive_press = config_dir.."theme/titlebar/maximized_press.svg"
+theme.titlebar_maximized_button_focus_active_press = config_dir.."theme/titlebar/unmaximized_press.svg"
 
 
 -- theme.wallpaper = config_dir.."/theme/background.png"

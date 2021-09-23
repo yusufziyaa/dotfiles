@@ -31,8 +31,8 @@
      inkscape:cy="54.828273"
      inkscape:window-width="1878"
      inkscape:window-height="985"
-     inkscape:window-x="0"
-     inkscape:window-y="23"
+     inkscape:window-x="13"
+     inkscape:window-y="50"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
@@ -42,10 +42,10 @@
      inkscape:groupmode="layer"
      id="layer1">
     <circle
-       style="opacity:1;fill:#ea4166;fill-opacity:1;fill-rule:evenodd;stroke-width:0.165363"
+       style="opacity:1;fill:#ea4166;fill-opacity:1;fill-rule:evenodd;stroke-width:0.13229"
        id="path31"
        cx="13.229167"
        cy="13.229167"
-       r="6.6145835" />
+       r="5.2916665" />
   </g>
 </svg>
